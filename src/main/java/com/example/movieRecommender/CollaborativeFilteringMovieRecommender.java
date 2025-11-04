@@ -32,29 +32,44 @@ public class CollaborativeFilteringMovieRecommender {
     }
 
     private static void initializeRatings() {
-        userRatings.put("Alice", Map.of(
-            "Inception", 5.0, "Titanic", 3.0, "Avatar", 4.5, "Joker", 4.0, "Interstellar", 4.5,
-            "Frozen", 2.5, "Iron Man", 5.0, "Up", 3.0, "Coco", 3.5, "Avengers", 4.5
+        userRatings.put("Alice", Map.ofEntries(
+                Map.entry("Inception", 5.0), Map.entry("Titanic", 3.0), Map.entry("Avatar", 4.5), Map.entry("Joker", 4.0), Map.entry("Interstellar", 4.5),
+                Map.entry("Frozen", 2.5), Map.entry("Iron Man", 5.0), Map.entry("Up", 3.0), Map.entry("Coco", 3.5), Map.entry("Avengers", 4.5),
+                Map.entry("Guardians of the Galaxy", 3.5), Map.entry("The Shawshank Redemption", 5.0), Map.entry("Forrest Gump", 4.0),
+                Map.entry("The Matrix", 4.5), Map.entry("Finding Nemo", 2.0), Map.entry("Spider-Man", 4.0), Map.entry("Madagascar", 3.0),
+                Map.entry("Inside Out", 3.5), Map.entry("The Dark Knight", 5.0), Map.entry("La La Land", 2.5)
         ));
 
-        userRatings.put("Bob", Map.of(
-            "Inception", 4.0, "Titanic", 2.0, "Avatar", 4.0, "Interstellar", 5.0, "Coco", 4.5,
-            "Frozen", 3.0, "Avengers", 5.0, "Black Panther", 4.0, "Joker", 4.5, "Toy Story", 3.0
+        userRatings.put("Bob", Map.ofEntries(
+                Map.entry("Inception", 4.0), Map.entry("Titanic", 2.0), Map.entry("Avatar", 4.0), Map.entry("Interstellar", 5.0), Map.entry("Coco", 4.5),
+                Map.entry("Frozen", 3.0), Map.entry("Avengers", 5.0), Map.entry("Black Panther", 4.0), Map.entry("Joker", 4.5), Map.entry("Toy Story", 3.0),
+                Map.entry("Guardians of the Galaxy", 4.0), Map.entry("The Shawshank Redemption", 4.5), Map.entry("Forrest Gump", 5.0),
+                Map.entry("The Matrix", 3.5), Map.entry("Finding Nemo", 3.0), Map.entry("Spider-Man", 4.5), Map.entry("Madagascar", 2.5),
+                Map.entry("Inside Out", 3.0), Map.entry("The Dark Knight", 5.0), Map.entry("La La Land", 3.5)
         ));
 
-        userRatings.put("Charlie", Map.of(
-            "Titanic", 5.0, "Joker", 5.0, "Interstellar", 4.0, "Coco", 3.5, "Up", 4.0,
-            "Frozen", 3.5, "Toy Story", 4.5, "Lion King", 5.0, "Shrek", 4.0, "Minions", 3.0
+        userRatings.put("Charlie", Map.ofEntries(
+                Map.entry("Titanic", 5.0), Map.entry("Joker", 5.0), Map.entry("Interstellar", 4.0), Map.entry("Coco", 3.5), Map.entry("Up", 4.0),
+                Map.entry("Frozen", 3.5), Map.entry("Toy Story", 4.5), Map.entry("Lion King", 5.0), Map.entry("Shrek", 4.0), Map.entry("Minions", 3.0),
+                Map.entry("Guardians of the Galaxy", 2.0), Map.entry("The Shawshank Redemption", 4.5), Map.entry("Forrest Gump", 5.0),
+                Map.entry("The Matrix", 2.5), Map.entry("Finding Nemo", 4.5), Map.entry("Spider-Man", 3.0), Map.entry("Madagascar", 2.0),
+                Map.entry("Inside Out", 4.0), Map.entry("The Dark Knight", 3.0), Map.entry("La La Land", 4.5)
         ));
 
-        userRatings.put("Dave", Map.of(
-            "Iron Man", 4.5, "Avengers", 4.0, "Black Panther", 5.0, "Inception", 3.5,
-            "Joker", 4.0, "Shrek", 4.0, "Minions", 3.5, "Frozen", 2.0, "Lion King", 4.5, "Toy Story", 4.0
+        userRatings.put("Dave", Map.ofEntries(
+                Map.entry("Iron Man", 4.5), Map.entry("Avengers", 4.0), Map.entry("Black Panther", 5.0), Map.entry("Inception", 3.5),
+                Map.entry("Joker", 4.0), Map.entry("Shrek", 4.0), Map.entry("Minions", 3.5), Map.entry("Frozen", 2.0), Map.entry("Lion King", 4.5),
+                Map.entry("Toy Story", 4.0), Map.entry("Guardians of the Galaxy", 4.5), Map.entry("The Shawshank Redemption", 3.5), Map.entry("Forrest Gump", 2.0),
+                Map.entry("The Matrix", 3.0), Map.entry("Finding Nemo", 3.5), Map.entry("Spider-Man", 5.0), Map.entry("Madagascar", 4.0),
+                Map.entry("Inside Out", 2.5), Map.entry("The Dark Knight", 4.5), Map.entry("La La Land", 2.0)
         ));
 
-        userRatings.put("Eve", Map.of(
-            "Coco", 5.0, "Up", 5.0, "Toy Story", 5.0, "Frozen", 4.0, "Minions", 4.5,
-            "Shrek", 4.5, "Lion King", 5.0, "Joker", 3.0, "Titanic", 4.0, "Iron Man", 4.0
+        userRatings.put("Eve", Map.ofEntries(
+                Map.entry("Coco", 5.0), Map.entry("Up", 5.0), Map.entry("Toy Story", 5.0), Map.entry("Frozen", 4.0), Map.entry("Minions", 4.5),
+                Map.entry("Shrek", 4.5), Map.entry("Lion King", 5.0), Map.entry("Joker", 3.0), Map.entry("Titanic", 4.0), Map.entry("Iron Man", 4.0),
+                Map.entry("Guardians of the Galaxy", 2.5), Map.entry("The Shawshank Redemption", 4.0), Map.entry("Forrest Gump", 3.5),
+                Map.entry("The Matrix", 2.0), Map.entry("Finding Nemo", 4.5), Map.entry("Spider-Man", 3.5), Map.entry("Madagascar", 3.0),
+                Map.entry("Inside Out", 5.0), Map.entry("The Dark Knight", 2.5), Map.entry("La La Land", 4.0)
         ));
     }
 
